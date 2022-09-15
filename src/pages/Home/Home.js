@@ -1,5 +1,14 @@
- import { CgArrowRight } from "react-icons/cg";
+// Hooks
 import { NavLink } from "react-router-dom";
+
+// Icons
+import { CgArrowRight } from "react-icons/cg";
+
+// Styles
+import './Home.css'
+
+
+
 function Home() {
   return (
     <div className="home">
@@ -9,8 +18,8 @@ function Home() {
       <h4>You can also have some fun in our <NavLink to = '/playroom'>Playroom</NavLink>, where you will find some product related games. </h4>
 
       <div className="home-btn">
-        <button><NavLink to={'/store'}>Visit My Store<span><CgArrowRight/></span></NavLink></button>
-        <button ><NavLink to={'/playroom'}>Go to My Playroom<span><CgArrowRight/></span></NavLink></button>
+        <NavLink to={'/store'}><button>Visit My Store<span><CgArrowRight/></span></button></NavLink>
+        <NavLink to={'/playroom'}><button >Go to My Playroom<span><CgArrowRight/></span></button></NavLink>
       </div> 
     </div>
   )

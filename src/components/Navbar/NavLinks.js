@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import {NavLink} from 'react-router-dom';
 import { ShopContext } from "../../context/ShopContext";
 import {motion} from 'framer-motion';
+import './Navbar.css'
 
 function NavLinks({isMobile, closeMobileMenu}) {
 

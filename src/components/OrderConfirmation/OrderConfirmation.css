@@ -1,0 +1,32 @@
+
+.order-confirm {
+  width: 600px;
+  height: 350px;
+  padding: 20px;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  border: 4px solid rgb(79, 155, 182);
+  border-radius: 5px;
+  box-shadow: 0 0 8px rgb(185, 185, 185);
+  background-color: #fff;
+}
+
+.order-confirm h4 {
+  line-height: 1.5;
+  color: #888;
+}
+
+.order-confirm h4 span {
+  color: #fe4880;
+  font-weight: 700;
+}
+
+.order-confirm h5 {
+  text-align: left;
+  color: rgb(79, 155, 182);
+  align-self: flex-end;
+}

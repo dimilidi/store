@@ -4,10 +4,10 @@ import './MemoryGame.css'
 
 function MemoryGame() {
   return (
-    <>
+    <div>
         <h1>Memory Game</h1>
         <Cards />        
-    </>
+    </div>
   )
 }
 

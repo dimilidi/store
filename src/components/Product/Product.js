@@ -1,18 +1,37 @@
+// Hooks
+import { useContext } from 'react';
+import { useNavigate } from 'react-router-dom';
 
+// Contexts
 import { ShopContext } from '../../context/ShopContext';
-import ProductDetails from '../OrderButton/OrderButton';
-import {useContext} from 'react';
-import {AiOutlineShoppingCart} from 'react-icons/ai';
-import { useNavigate, NavLink } from 'react-router-dom';
+
+// Components
+import OrderButton from '../OrderButton/OrderButton';
+
+// Icons
+import { AiOutlineShoppingCart } from 'react-icons/ai';
+
+// Styles
+import './Product.css';
 
 
 function Product({id, name, price, picture}) {
 
-    const {isShown, toggleIsShown, addProduct, getProductQuantity, getItem, getItemById, setFoundItem} = useContext(ShopContext)
+  // Shop Context Variables
+    const {
+      addProduct, 
+      getProductQuantity,  
+      getItemById, 
+      setFoundItem
+    } = useContext(ShopContext)
 
+  // Hook Variables
     const navigate = useNavigate()
+ 
+  // Get Product Quantity
     const quantity = getProductQuantity(id);
-
+  
+  // Handle Link to Product Details
     const handleImageLink = (e) =>{
       const item = getItemById(id) 
       console.log('ITEM',item.name);
@@ -23,27 +42,22 @@ function Product({id, name, price, picture}) {
   return (
     <>
     <div className='product' >
-      <img src = {picture} onClick={(e)=>handleImageLink(e)}/>
+      <img src = {picture} alt = '' onClick={(e)=>handleImageLink(e)}/>
   
         <div className='product-info'>
             <div className='product-main-info'>
                 <span className='product-name'>{name}</span>
                 <span className='product-price'>{price}€</span>
-                
             </div>
-            {/* {isShown[id] && <ProductDetails id = {id}/>} */}
            
            {quantity === 0 ? (
 
             <button onClick={()=>addProduct(id)} className='add-btn'>
                 <AiOutlineShoppingCart/> Buy
-                {/* {isShown[id] ? 'Hide Details' : 'Show Details'} */}
-                {/* onClick={()=>toggleIsShown(id)} */}
             </button> 
        
            ):(
-            <ProductDetails id = {id}/>
-
+            <OrderButton id = {id}/>
            )}
         </div>
     </div>

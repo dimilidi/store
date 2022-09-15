@@ -1,0 +1,10 @@
+.store-con {
+    height: 600px;
+    display: flex;
+    margin-top: 30px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 3rem;
+  }
+  

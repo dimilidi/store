@@ -1,15 +1,28 @@
+// Components
+import CartItem from "../CartItem/CartItem";
+
+// Hooks
 import { useContext } from "react";
-import { Stack, Nav } from "react-bootstrap";
-import Offcanvas from "react-bootstrap/Offcanvas";
+import { Link, useNavigate } from "react-router-dom";
+
+// Contexts
 import { ShopContext } from "../../context/ShopContext";
 import { UserContext } from "../../context/UserContext";
-import CartItem from "../CartItem/CartItem";
+
+// Data
 import { products } from "../../data/products";
-import { Link, useNavigate } from "react-router-dom";
+
+// Libraries
+import { Stack, Nav } from "react-bootstrap";
+import Offcanvas from "react-bootstrap/Offcanvas";
+
+// Styles
+import './Cart.css'
+
 
 function Cart({ isOpen }) {
   const { closeCart, cartItems, setCartItems } = useContext(ShopContext);
-  const { isLoggedIn, setIsLoggedIn } = useContext(UserContext);
+  const { isLoggedIn } = useContext(UserContext);
   const navigate = useNavigate();
 
   const handleOrder = ()=> {

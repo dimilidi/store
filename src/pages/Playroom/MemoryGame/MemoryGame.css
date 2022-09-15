@@ -10,15 +10,15 @@ h1 {
 }
 
 .con {
-    width: 600px;
-    height: 600px;
+    width: 580px;
+    height: 580px;
     background-color: rgb(255, 208, 0);
     padding: 20px;
+    border-radius: 5px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(4, 1fr);
     gap: .5rem;
-    border-radius: 5px;
 }
 
 .card {
@@ -77,4 +77,22 @@ h1 {
 
     }
 
+}
+
+
+
+@media screen and (max-width: 990px){
+    .con {
+        width: 500px;
+        height: 500px;
+    }
+}
+
+@media screen and (max-width: 590px){
+    .con {
+        width: 330px;
+        height: 330px;
+        padding: 10px;
+        gap: .3rem
+    }
 }

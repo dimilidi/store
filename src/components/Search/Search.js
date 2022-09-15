@@ -1,26 +1,33 @@
-import { getActiveElement } from '@testing-library/user-event/dist/utils';
-import {useContext} from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
+// Hooks
+import { useContext } from 'react';
+import { useNavigate } from 'react-router-dom';
+
+// Contexts
 import { ShopContext } from '../../context/ShopContext';
-import {products} from '../../data/products';
+
+// Styles
+import './Search.css'
 
 function Search() {
 
-    const {searchedItem, setSearchedItem, setFoundItem , foundItem, getItem} = useContext(ShopContext);
+   // Shop Context Variables
+    const {
+        searchedItem, 
+        setSearchedItem, 
+        setFoundItem , 
+        getItem
+    } = useContext(ShopContext);
 
+    // Hook Variables
     const navigate = useNavigate();
 
-
-
-
+    // Find Searched Item
     const findItem =(e) => {
-        e.preventDefault()
-        let item = getItem(searchedItem)
-        setFoundItem(item.name)
-        navigate(`/store/${item.name}`)
-        console.log('ffff',foundItem);
-        setSearchedItem('')
-        // setFoundItem(null)
+        e.preventDefault();
+        let item = getItem(searchedItem);
+        setFoundItem(item.name);
+        navigate(`/store/${item.name}`);
+        setSearchedItem('');
     }
 
     return (
@@ -30,7 +37,6 @@ function Search() {
                 type = 'text' 
                 value = {searchedItem}
                 placeholder= '🔍'
-            
             />
         </form>
     )

@@ -1,7 +1,17 @@
-import { useContext } from "react"
-import { ShopContext } from "../../context/ShopContext"
+// Hooks
+import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
-import {products} from '../../data/products'
+
+// Contexts
+import { ShopContext } from "../../context/ShopContext";
+
+
+// Data
+import {products} from '../../data/products';
+
+// Styles
+import './CartItem.css'
+
 
 function CartItem({id, quantity}) {
 
@@ -18,13 +28,13 @@ function CartItem({id, quantity}) {
         closeCart()
       }
 
-   
-     
+    
 
   return (
     <div className="cart-item-con">
         <img 
             src={item.picture} 
+            alt = ''
             onClick={handleImageLink} 
         />
         <div className="cart-item-info">

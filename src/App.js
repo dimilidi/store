@@ -1,7 +1,7 @@
 // Pages
-import Home from './pages/Home';
-import Store from './pages/Store';
-import Playroom from './pages/Playroom';
+import Home from './pages/Home/Home';
+import Store from './pages/Store/Store';
+import Playroom from './pages/Playroom/Playroom';
 
 // Components
 import Header from './components/Header/Header';
@@ -12,7 +12,6 @@ import Error404 from './components/Error404/Error404';
 import OrderConfirmation from './components/OrderConfirmation/OrderConfirmation';
 import Goodbye from './components/Goodbye/Goodbye';
 import Footer from './components/Footer/Footer';
-import Cart from './components/Cart/Cart';
 
 // Libraries
 import {Routes, Route, Outlet} from 'react-router-dom';

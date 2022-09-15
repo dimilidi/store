@@ -1,0 +1,35 @@
+.product-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.quantity-count > span {
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+/* 
+  .add-btn {
+    width: 100%;
+    margin-top: 10px;
+    background-color: rgb(79, 155, 182);
+    color: white;
+    padding: 8px;
+    border-radius: 5px;
+  } */
+
+.top-details,
+.bottom-details {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.count-btn {
+  border-radius: 5px;
+  outline: 1px solid rgb(225, 223, 223);
+  border-radius: 5px;
+  color: gray;
+  padding: 5px 15px;
+}
