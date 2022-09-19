@@ -1,32 +1,24 @@
-import {useState} from 'react';
+import {useState, useContext} from 'react';
 import Card from './Card';
-import {cards} from '../../../data/memory-cards';
+import { MemoryGameContext } from '../../../context/MemoryGameContext';
+import {cards} from '../../../data/memory-cards'
 
 function Cards() {
 
-    const [items, setItems] = useState(cards);
-    const [prev, setPrev] = useState(-1);
+    const {
+        items, 
+        setItems,
+        correct,
+        setCorrect,
+        isEnd,
+        setIsEnd,
+        prev, 
+        setPrev,
+        check
+    
+      } = useContext(MemoryGameContext)
+    
 
-    function check(current) {
-        if(items[current].id  == items[prev].id) {
-            items[current].stat = 'correct';
-            items[prev].stat = 'correct';
-            setItems([...items])
-            setPrev(-1);
-        } else {
-            items[current].stat = 'wrong';
-            items[prev].stat = 'wrong';
-            setItems([...items])
-            setTimeout(() => {
-                items[current].stat = '';
-                items[prev].stat = '';
-                setItems([...items])
-                setPrev(-1);
-
-            }, 1000)
-
-        }
-    }
 
     function handleClick(id)  {
         // items[id].stat = 'active'
@@ -39,9 +31,9 @@ function Cards() {
         } else {
             check(id)
         }
-
     }
 
+    
   return (
      <div className='con' >
         {items.map((item, index) => (

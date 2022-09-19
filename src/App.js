@@ -1,3 +1,6 @@
+// Hooks
+import {Routes, Route, Outlet} from 'react-router-dom';
+
 // Pages
 import Home from './pages/Home/Home';
 import Store from './pages/Store/Store';
@@ -12,9 +15,6 @@ import Error404 from './components/Error404/Error404';
 import OrderConfirmation from './components/OrderConfirmation/OrderConfirmation';
 import Goodbye from './components/Goodbye/Goodbye';
 import Footer from './components/Footer/Footer';
-
-// Libraries
-import {Routes, Route, Outlet} from 'react-router-dom';
 
 // Styles
 import './App.css';
@@ -37,7 +37,6 @@ function App() {
           <Route path=':name' element={<FoundItem />}/> 
         </Route>
         <Route path='/playroom' element={<Playroom />} />
-        {/* <Route path='/cart' element={<Cart />} /> */}
         <Route path='/sign-in' element={<SignIn />} />
         <Route path='/order-confirmation' element={<OrderConfirmation />} />
         <Route path='/welcome' element={<WelcomeMessage />} />

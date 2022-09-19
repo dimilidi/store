@@ -1,8 +1,8 @@
 export const cards = [
     { id: 1, img: '/images/camera.jpg', stat: ''},
     { id: 1, img: '/images/camera.jpg', stat: ''},
-    { id: 2, img: '/images/shoes1.jpg', stat: ''},
-    { id: 2, img: '/images/shoes1.jpg', stat: ''},
+    { id: 2, img: '/images/shoes2.jpg', stat: ''},
+    { id: 2, img: '/images/shoes2.jpg', stat: ''},
     { id: 3, img: '/images/shoes3.jpg', stat: ''},
     { id: 3, img: '/images/shoes3.jpg', stat: ''},
     { id: 4, img: '/images/watch.jpg', stat: ''},

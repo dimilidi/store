@@ -6,7 +6,9 @@ import './Navbar.css'
 
 function NavLinks({isMobile, closeMobileMenu}) {
 
+    // Shop COntext Variables
     const {setFoundItem} = useContext(ShopContext);
+    // Animation
     const animateFrom = {opacity: 0, y: -40};
     const animateTo = {opacity: 1, y: 0};
    

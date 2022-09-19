@@ -35,6 +35,42 @@ export const products = [
         isAvailable: true,
         picture: '/images/flower.jpg'
     },
+    {
+        id: '5',
+        name: 'Headset',
+        category: 'Electronic',
+        description: 'The new headset is now available', 
+        price: 500,
+        isAvailable: true,
+        picture: '/images/headset.jpg'
+    },
+    {
+        id: '6',
+        name: 'Vase',
+        category: 'Flowers',
+        description: 'The new flower is now available', 
+        price: 65,
+        isAvailable: true,
+        picture: '/images/flower2.jpg'
+    },
+    {
+        id: '7',
+        name: 'Training shoes',
+        category: 'Shoes',
+        description: 'The new sneakers are now available', 
+        price: 250,
+        isAvailable: true,
+        picture: '/images/shoes3.jpg'
+    },
+    {
+        id: '10',
+        name: 'Puma',
+        category: 'Shoes',
+        description: 'The new sneakers are now available', 
+        price: 250,
+        isAvailable: true,
+        picture: '/images/shoes1.jpg'
+    }
 ];
 
 export const adminUser = {

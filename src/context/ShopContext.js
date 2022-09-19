@@ -20,6 +20,7 @@ export const ShopProvider = ({children}) =>{
   const [searchedItem, setSearchedItem] = useState('');
   const [foundItem, setFoundItem] = useState(null);
   const [openHamburger, setOpenHamburger] = useState(false);
+  const [filteredItems, setFilteredItems] = useState([]);
 
 
 
@@ -42,6 +43,30 @@ export const ShopProvider = ({children}) =>{
         [id]: !isShown[id],
       })
   }
+
+// Product Categories 
+  const allCategories =  products.reduce((acc, curr) => {
+     acc.push(curr.category)
+     return acc
+  },[]);
+
+   const categories = allCategories.filter(function(item, pos){
+    return allCategories.indexOf(item)== pos; 
+  });
+
+  
+
+
+ 
+
+  const filterCategory = (category) => {
+    const newProductsList = products.filter((item) => 
+    (item.category).toLowerCase() == category);
+    console.log(newProductsList)
+
+     setFilteredItems(newProductsList);
+  }
+console.log(filteredItems);
 
 
 
@@ -115,7 +140,7 @@ export const ShopProvider = ({children}) =>{
 
 
   
-    const exportData = {getProductQuantity, addProduct, removeProduct, deleteProduct, cartItems,setCartItems, totalAmount, openCart, closeCart, toggleIsShown, isShown, setIsShown, searchedItem, setSearchedItem, foundItem, setFoundItem, getItem, getItemById, openHamburger, setOpenHamburger}
+    const exportData = {getProductQuantity, addProduct, removeProduct, deleteProduct, cartItems,setCartItems, totalAmount, openCart, closeCart, toggleIsShown, isShown, setIsShown, searchedItem, setSearchedItem, foundItem, setFoundItem, getItem, getItemById, openHamburger, setOpenHamburger, filterCategory, categories, setFilteredItems, filteredItems}
 
     return (
       <ShopContext.Provider value = {exportData} >
