@@ -28,9 +28,6 @@ export const MemoryGameProvider = ({children}) =>{
             setIsEnd(true);
            }
 
-           console.log('G',guesses);
-           console.log('C',correct);
-
         } else {
             items[current].stat = 'wrong';
             items[prev].stat = 'wrong';
@@ -42,8 +39,6 @@ export const MemoryGameProvider = ({children}) =>{
                 setPrev(-1);
 
             }, 1000)
-    
-
         }
     }
 

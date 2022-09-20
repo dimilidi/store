@@ -1,5 +1,5 @@
 // Hooks
-import { useContext } from 'react'
+import { useContext, useEffect } from 'react'
 import { useParams, useNavigate} from 'react-router-dom'
 
 // Components
@@ -16,9 +16,7 @@ import './FoundItem.css'
 
 
 function FoundItem() {
-
-
-
+  
 // Shop Context variables
 const {
     getItem, 
@@ -27,6 +25,7 @@ const {
     foundItem, 
     getProductQuantity
 } = useContext(ShopContext)
+
 
 // Hook variables  
 let param = useParams();
@@ -43,17 +42,17 @@ const quantity = getProductQuantity(item.id);
     }
    
     // Next Product
+    useEffect(() => {
+        navigate(`/store/${foundItem}`)
+        
+    },[foundItem]);
+
     const moveToNextProduct = () => {
         const itemNames = products.map((item, index) => item.name.toLowerCase());
-
-        products.map((el, index) => {
-            if((el.id) > item.id) {
-                setFoundItem(itemNames[item.id])
-            }
-        })
-
-        navigate(`/store/${foundItem}`)
+        setFoundItem(itemNames[item.id])
     }
+
+ 
     
   return (
     <>
@@ -82,7 +81,7 @@ const quantity = getProductQuantity(item.id);
     
             )}
         </div>
-        <img src = {item.picture} />
+        <img src = {item.picture} alt = '' />
 
     </div>
     </>

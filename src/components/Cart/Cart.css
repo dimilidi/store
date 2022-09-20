@@ -1,13 +1,17 @@
 .total-price {
-    font-weight: bold;
-    text-align: right;
-  }
+  text-align: right;
+  font-weight: bold;
+}
 
-  .add-btn {
-    width: 100%;
-    margin-top: 10px;
-    background-color: rgb(79, 155, 182);
-    color: white;
-    padding: 8px;
-    border-radius: 5px;
-  }
+.total-price span {
+  margin-left: 10px;
+}
+
+.add-btn {
+  width: 100%;
+  margin-top: 10px;
+  background-color: rgb(79, 155, 182);
+  color: white;
+  padding: 8px;
+  border-radius: 5px;
+}

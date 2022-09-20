@@ -9,6 +9,9 @@ import { ShopContext } from "../../context/ShopContext";
 // Data
 import {products} from '../../data/products';
 
+// Utilities
+import formatCurrency from "../../utilities/formatCurrency";
+
 // Styles
 import './CartItem.css'
 
@@ -42,9 +45,9 @@ function CartItem({id, quantity}) {
                 <div className="cart-item-price-con"> {item.name} 
                     {quantity>1 &&  <span className="cart-item-quantity ">x{quantity}</span>}
                 </div>
-                <div className="cart-item-price">{item.price}€</div>
+                <div className="cart-item-price">{formatCurrency(item.price)}</div>
             </div>
-             <div className="total-price">{item.price * quantity}€</div>
+             <div className="total-price">{formatCurrency(item.price * quantity)}</div>
         </div>
         <button className="remove-cart-item-btn" onClick={()=>deleteProduct(item.id)}>x</button>
     </div>

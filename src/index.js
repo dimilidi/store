@@ -17,6 +17,7 @@ root.render(
           <MemoryGameProvider>
             <App />
           </MemoryGameProvider>
+
         </ShopProvider>
      </UserProvider>
     </BrowserRouter>

@@ -22,7 +22,7 @@ function SignInForm() {
     Login, 
     details, 
     setDetails, 
-    setIsLoggedIn 
+    setIsLoggedIn,
   } = useContext(UserContext);
 
   // Submit Handler
@@ -30,9 +30,11 @@ function SignInForm() {
     e.preventDefault();
     Login(details);
   };
+  
 
   return (
     <div className="sign-in">
+        
       {user.email != "" ? (
         <WelcomeMessage />
       ) : (

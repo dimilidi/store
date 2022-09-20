@@ -11,6 +11,9 @@ import OrderButton from '../OrderButton/OrderButton';
 // Icons
 import { AiOutlineShoppingCart } from 'react-icons/ai';
 
+// Utilities
+import formatCurrency from '../../utilities/formatCurrency';
+
 // Styles
 import './Product.css';
 
@@ -34,7 +37,6 @@ function Product({id, name, price, picture}) {
   // Handle Link to Product Details
     const handleImageLink = (e) =>{
       const item = getItemById(id) 
-      console.log('ITEM',item.name);
       setFoundItem(name)
       navigate(`/store/${name.toLowerCase()}`)
     }
@@ -47,7 +49,7 @@ function Product({id, name, price, picture}) {
         <div className='product-info'>
             <div className='product-main-info'>
                 <span className='product-name'>{name}</span>
-                <span className='product-price'>{price}€</span>
+                <span className='product-price'>{formatCurrency(price)}</span>
             </div>
            
            {quantity === 0 ? (

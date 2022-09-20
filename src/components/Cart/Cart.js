@@ -17,7 +17,10 @@ import { Stack, Nav } from "react-bootstrap";
 import Offcanvas from "react-bootstrap/Offcanvas";
 
 // Styles
-import './Cart.css'
+import './Cart.css';
+
+//Utilities
+import formatCurrency from "../../utilities/formatCurrency";
 
 
 function Cart({ isOpen }) {
@@ -54,11 +57,13 @@ function Cart({ isOpen }) {
             <CartItem key={item.id} {...item} />
           ))}
            <div className="total-price">
-            Total:
-            {cartItems.reduce((acc, curr) => {
-              const item = products.find((item) => item.id === curr.id);
-              return acc + (item?.price || 0) * curr.quantity;
-            }, 0)}
+              Total:
+              <span>
+                  {formatCurrency(cartItems.reduce((acc, curr) => {
+                const item = products.find((item) => item.id === curr.id);
+                  return acc + (item?.price || 0) * curr.quantity;
+              }, 0))}
+              </span> 
           </div>
           <button
             className="add-btn"

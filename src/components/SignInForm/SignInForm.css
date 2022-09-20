@@ -97,6 +97,6 @@ form .form-inner .form-group {
 }
 
 .form-inner input[type="submit"]:hover {
-  background-position: 100% 0%;
+  background-position: 100%;
 }
 

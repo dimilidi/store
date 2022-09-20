@@ -79,7 +79,8 @@ img {
 }
 
 .details-nav button {
-  color: rgb(79, 155, 182);
+  color: rgb(63, 151, 184);
+  font-size: 1.1rem;
 }
 
 @media screen and (max-width: 990px) {

@@ -1,6 +1,6 @@
 
 .logo {
-  color: rgb(79, 155, 182);
+  color: rgb(63, 151, 184);
   font-size: 2rem;
 }
 
@@ -37,7 +37,7 @@
 }
 
 .active {
-  color: rgb(79, 155, 182);
+  color: rgb(63, 151, 184);
 }
 
 svg {
@@ -50,7 +50,7 @@ svg {
   outline: none;
   margin-right: 50px;
   background-color: transparent;
-  color: rgb(79, 155, 182);
+  color: rgb(63, 151, 184);
   position: relative;
 }
 
