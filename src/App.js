@@ -5,6 +5,7 @@ import {Routes, Route, Outlet} from 'react-router-dom';
 import Home from './pages/Home/Home';
 import Store from './pages/Store/Store';
 import Playroom from './pages/Playroom/Playroom';
+import ParticlesB from './components/ParticlesB'
 
 // Components
 import Header from './components/Header/Header';
@@ -15,6 +16,7 @@ import Error404 from './components/Error404/Error404';
 import OrderConfirmation from './components/OrderConfirmation/OrderConfirmation';
 import Goodbye from './components/Goodbye/Goodbye';
 import Footer from './components/Footer/Footer';
+
 
 // Styles
 import './App.css';
@@ -28,7 +30,9 @@ function App() {
     <header className="header">
       <Header />
     </header>
-    <main className="main">
+
+
+   <main className="main">
       <Outlet />
       <Routes>
         <Route path='*' element={<Error404/>} />
@@ -43,6 +47,7 @@ function App() {
         <Route path='/bye' element={<Goodbye />} />
       </Routes> 
     </main>
+
     <footer>
       <Footer />
     </footer>

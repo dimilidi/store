@@ -68,7 +68,4 @@ export default MemoryGame
 
 // TO DO :
 
-// - products API
-// - user Local Storage
-// - next product --> why double click ?? 
 // - game bug --> clear state after leaving playroom
