@@ -5,7 +5,6 @@ import {Routes, Route, Outlet} from 'react-router-dom';
 import Home from './pages/Home/Home';
 import Store from './pages/Store/Store';
 import Playroom from './pages/Playroom/Playroom';
-import ParticlesB from './components/ParticlesB'
 
 // Components
 import Header from './components/Header/Header';

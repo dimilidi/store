@@ -74,7 +74,7 @@ function Header() {
         <Navbar /> 
       </div>
 
-      <div>
+      <div className="right-aliner">
         {/* Sign-in Icon */}
         <span 
             className="sign-in-link" 

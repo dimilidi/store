@@ -1,18 +1,15 @@
-import { logDOM } from "@testing-library/react";
 import { createContext, useState, useEffect } from "react"
 import { adminUser } from "../data/products";
+
 
 export const UserContext = createContext()
 
 export const UserProvider = ({children}) =>{
 
-    const [lolo, setLolo] = useState('');
-    const [email, setEmail] = useState('');
     const [user, setUser] = useState(getUser);
     const [error, setError] = useState('');
     const [details, setDetails] = useState({name:'', email:'', password:''});
     const [isLoggedIn, setIsLoggedIn] = useState(getIsLoggedIn);
-
 
 
 // Save Signed-in state in Local Storage after refresh
@@ -68,7 +65,6 @@ export const UserProvider = ({children}) =>{
 
 
     const exportData={user, setUser, error, setError,Login, Logout,details, setDetails,isLoggedIn, setIsLoggedIn}
-
 
 
     return (

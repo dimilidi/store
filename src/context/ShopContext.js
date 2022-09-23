@@ -6,9 +6,6 @@ import { products } from "../data/products";
 
 
 
-
-
-
 export const ShopContext = createContext()
 
 export const ShopProvider = ({children}) =>{
@@ -56,9 +53,6 @@ export const ShopProvider = ({children}) =>{
 
   
 
-
- 
-
   const filterCategory = (category) => {
     const newProductsList = products.filter((item) => 
     (item.category).toLowerCase() == category);
@@ -66,8 +60,6 @@ export const ShopProvider = ({children}) =>{
 
      setFilteredItems(newProductsList);
   }
-console.log(filteredItems);
-
 
 
 
