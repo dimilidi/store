@@ -53,7 +53,7 @@
 }
 
 .card {
-    box-shadow: 0 0 3px 2px rgb(70, 70, 70);
+    box-shadow: 0 0 3px  rgb(86, 86, 86);
     transform: rotateY(180deg);
     animation: 2s hideCard linear;
     transition: transform .5s;
