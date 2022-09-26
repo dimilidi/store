@@ -1,12 +1,10 @@
 // Hooks
 import { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
-
 // Contexts
 import { ShopContext } from '../../context/ShopContext';
-
 // Styles
-import './Search.css'
+import './Search.css';
 
 function Search() {
 

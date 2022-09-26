@@ -8,10 +8,6 @@ function Cards() {
     const {
         items, 
         setItems,
-        correct,
-        setCorrect,
-        isEnd,
-        setIsEnd,
         prev, 
         setPrev,
         check
@@ -21,9 +17,6 @@ function Cards() {
 
 
     function handleClick(id)  {
-        // items[id].stat = 'active'
-        // setItems([...items])
-
         if(prev === -1) {
             items[id].stat = 'active';
             setItems([...items])
@@ -37,7 +30,12 @@ function Cards() {
   return (
      <div className='con' >
         {items.map((item, index) => (
-            <Card key = {index}  item = {item} id = {index}  handleClick ={handleClick}/>
+            <Card 
+                key = {index}  
+                item = {item} 
+                id = {index}  
+                handleClick ={handleClick}
+            />
         ))}
      </div> 
 

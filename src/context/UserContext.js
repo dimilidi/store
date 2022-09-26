@@ -1,4 +1,6 @@
-import { createContext, useState, useEffect } from "react"
+// Hooks
+import { createContext, useState, useEffect } from "react";
+// Data
 import { adminUser } from "../data/products";
 
 

@@ -5,7 +5,6 @@ import { ShopProvider } from './context/ShopContext';
 import { UserProvider } from './context/UserContext';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import App from './App';
-import MemoryGame from './pages/Playroom/MemoryGame/MemoryGame';
 import { MemoryGameProvider } from './context/MemoryGameContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -17,7 +16,6 @@ root.render(
           <MemoryGameProvider>
             <App />
           </MemoryGameProvider>
-
         </ShopProvider>
      </UserProvider>
     </BrowserRouter>

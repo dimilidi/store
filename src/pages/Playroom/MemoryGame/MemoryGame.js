@@ -1,26 +1,27 @@
-import {useContext, useState} from 'react';
+// Hooks
+import {useContext} from 'react';
+// Components
 import Cards from './Cards';
-import {cards} from '../../../data/memory-cards';
-import {MdOutlineRestartAlt} from 'react-icons/md';
-import {motion} from 'framer-motion';
-
-
+// Contexts
 import { MemoryGameContext } from '../../../context/MemoryGameContext';
-import './MemoryGame.css'
+// Data
+import {cards} from '../../../data/memory-cards';
+// Icons
+import {MdOutlineRestartAlt} from 'react-icons/md';
+// Animation
+import {motion} from 'framer-motion';
+// Style
+import './MemoryGame.css';
+
 
 function MemoryGame() {
 
   const {
     items, 
     setItems,
-    correct,
     setCorrect,
     isEnd,
-    setIsEnd,
-    prev, 
-    setPrev,
-    check
-
+    setIsEnd
   } = useContext(MemoryGameContext);
 
     // Animation
@@ -28,16 +29,12 @@ function MemoryGame() {
     const animateTo = {opacity: 1, y: 0};
     
 
-
-
   function restartGame() {
-
-    cards.sort(() => Math.random() -0.5)
+    cards.sort(() => Math.random() -0.5);
     setCorrect([]);
     setIsEnd(false);
     setItems(cards)
     items.map((el)=> el.stat = '')
-
   }
 
 
@@ -64,8 +61,3 @@ function MemoryGame() {
 
 export default MemoryGame
 
-
-
-// TO DO :
-
-// - game bug --> clear state after leaving playroom

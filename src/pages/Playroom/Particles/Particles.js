@@ -10,7 +10,6 @@ function ParticlesB() {
 
   return (
     <div >
-
       <Particles
             id="tsparticles"
             init={particlesInit}

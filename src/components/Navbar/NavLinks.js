@@ -1,12 +1,16 @@
-import React, { useContext } from "react";
-import {NavLink} from 'react-router-dom';
+// Hooks
+import { useContext } from "react";
+import { NavLink } from 'react-router-dom';
+// Contexts
 import { ShopContext } from "../../context/ShopContext";
-import {motion} from 'framer-motion';
+// Animation
+import { motion } from 'framer-motion';
+// Styles
 import './Navbar.css'
 
 function NavLinks({isMobile, closeMobileMenu}) {
 
-    // Shop COntext Variables
+    // Shop Context Variables
     const {setFoundItem} = useContext(ShopContext);
     // Animation
     const animateFrom = {opacity: 0, y: -40};

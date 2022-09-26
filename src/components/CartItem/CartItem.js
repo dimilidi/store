@@ -1,24 +1,19 @@
 // Hooks
 import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
-
 // Contexts
 import { ShopContext } from "../../context/ShopContext";
-
-
 // Data
 import {products} from '../../data/products';
-
 // Utilities
 import formatCurrency from "../../utilities/formatCurrency";
-
 // Styles
 import './CartItem.css'
 
 
 function CartItem({id, quantity}) {
 
-    const navigate = useNavigate()
+    const navigate = useNavigate();
     
     const {deleteProduct, setFoundItem, closeCart} = useContext(ShopContext);
     const item = products.find(item => item.id===id)
@@ -29,9 +24,8 @@ function CartItem({id, quantity}) {
         setFoundItem(item.name);
         navigate(`/store/${item.name.toLowerCase()}`);
         closeCart()
-      }
+    }
 
-    
 
   return (
     <div className="cart-item-con">

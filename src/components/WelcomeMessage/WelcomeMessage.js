@@ -2,10 +2,8 @@
 import { useContext } from 'react';
 import { UserContext } from '../../context/UserContext';
 import { NavLink } from 'react-router-dom';
-
 // Icons
 import { CgArrowRight } from 'react-icons/cg';
-
 // Styles
 import './WelcomeMessage.css'
 

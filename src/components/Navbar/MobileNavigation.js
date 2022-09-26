@@ -1,12 +1,9 @@
 // Hooks
 import { useContext } from 'react';
-
 // Components
 import NavLinks from './NavLinks';
-
 // Contexts
 import { ShopContext } from '../../context/ShopContext';
-
 // Icons
 import {VscMenu} from 'react-icons/vsc';
 import {CgClose} from 'react-icons/cg';

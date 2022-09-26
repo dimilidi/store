@@ -24,10 +24,9 @@ function Filter() {
       (item) => item.category.toLowerCase() == e.target.value.toLowerCase()
     );
     setFilteredItems(newProductsList);
-
-    console.log(filteredItems);
-
   }
+
+  
   return (
     <div className="filter">
             <select onChange={(e)=>handleFilterSelect(e)}>

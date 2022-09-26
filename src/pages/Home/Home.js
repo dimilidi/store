@@ -1,13 +1,9 @@
 // Hooks
 import { NavLink } from "react-router-dom";
-
 // Icons
 import { CgArrowRight } from "react-icons/cg";
-
 // Styles
 import './Home.css'
-
-
 
 
 function Home() {

@@ -1,19 +1,16 @@
 // Hooks
 import { Outlet } from "react-router-dom";
-import { useContext, useState } from "react";
-
+import { useContext } from "react";
 // Components
 import Product from "../../components/Product/Product";
 import Filter from "../../components/Filter/Filter";
-
 // Contexts
 import { ShopContext } from "../../context/ShopContext";
-
 // Data
 import { products } from "../../data/products";
-
 // Styles
 import "./Store.css";
+
 
 function Store() {
 

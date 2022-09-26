@@ -1,5 +1,7 @@
+// Hooks
 import { createContext } from "react";
 import { useState } from "react";
+// Data
 import { cards } from "../data/memory-cards";
 
 
@@ -8,7 +10,6 @@ export const MemoryGameContext = createContext()
 
 export const MemoryGameProvider = ({children}) =>{
 
-      
     const [items, setItems] = useState(cards);
     const [prev, setPrev] = useState(-1);
     const [correct, setCorrect] = useState([]);

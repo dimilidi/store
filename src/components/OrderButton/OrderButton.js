@@ -1,9 +1,7 @@
 // Hooks
 import { useContext } from 'react';
-
 // Contexts
 import { ShopContext } from '../../context/ShopContext';
-
 // Styles
 import './OrderButton.css'
 

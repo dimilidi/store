@@ -1,16 +1,11 @@
 // Hooks
 import { useContext } from "react";
-
 // Contexts
 import { UserContext } from "../../context/UserContext";
-
 // Components
 import WelcomeMessage from "../WelcomeMessage/WelcomeMessage";
-
 // Styles
 import './SignInForm.css'
-
-
 
 
 function SignInForm() {

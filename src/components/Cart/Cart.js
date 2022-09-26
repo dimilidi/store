@@ -1,24 +1,18 @@
 // Components
 import CartItem from "../CartItem/CartItem";
-
 // Hooks
 import { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
-
 // Contexts
 import { ShopContext } from "../../context/ShopContext";
 import { UserContext } from "../../context/UserContext";
-
 // Data
 import { products } from "../../data/products";
-
 // Libraries
 import { Stack, Nav } from "react-bootstrap";
 import Offcanvas from "react-bootstrap/Offcanvas";
-
 // Styles
 import './Cart.css';
-
 //Utilities
 import formatCurrency from "../../utilities/formatCurrency";
 
@@ -31,12 +25,10 @@ function Cart({ isOpen }) {
   const handleOrder = ()=> {
     closeCart();
     if(isLoggedIn){
-        setCartItems([])
-    //   localStorage.removeItem("cartItems")
+      setCartItems([])
     navigate('order-confirmation')
-
     }else {
-        navigate('/sign-in')
+      navigate('/sign-in')
     }
   }
 

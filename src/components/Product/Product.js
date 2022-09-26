@@ -1,19 +1,14 @@
 // Hooks
 import { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
-
 // Contexts
 import { ShopContext } from '../../context/ShopContext';
-
 // Components
 import OrderButton from '../OrderButton/OrderButton';
-
 // Icons
 import { AiOutlineShoppingCart } from 'react-icons/ai';
-
 // Utilities
 import formatCurrency from '../../utilities/formatCurrency';
-
 // Styles
 import './Product.css';
 

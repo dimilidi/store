@@ -1,15 +1,16 @@
+// Hooks
 import { createContext } from "react";
 import { useState, useEffect } from "react";
+// Components
 import Cart from "../components/Cart/Cart";
+// Data
 import { products } from "../data/products";
-
 
 
 
 export const ShopContext = createContext()
 
 export const ShopProvider = ({children}) =>{
-
 
   const [cartItems, setCartItems] =useState([]);
   const [isOpen, setIsOpen] = useState(false);
@@ -18,8 +19,6 @@ export const ShopProvider = ({children}) =>{
   const [foundItem, setFoundItem] = useState(null);
   const [openHamburger, setOpenHamburger] = useState(false);
   const [filteredItems, setFilteredItems] = useState([]);
-
-
 
   const totalAmount = cartItems.reduce((acc,curr) =>  acc + curr.quantity,0);
   const openCart =()=> setIsOpen(true);
@@ -52,11 +51,9 @@ export const ShopProvider = ({children}) =>{
   });
 
   
-
   const filterCategory = (category) => {
     const newProductsList = products.filter((item) => 
     (item.category).toLowerCase() == category);
-    console.log(newProductsList)
 
      setFilteredItems(newProductsList);
   }
@@ -75,7 +72,6 @@ export const ShopProvider = ({children}) =>{
 
   const addProduct = (id)=> {
     const exist = cartItems.find(item  => item.id=== id);
-    console.log('zz',exist);
 
     if(exist) {
         setCartItems(
@@ -83,7 +79,7 @@ export const ShopProvider = ({children}) =>{
                 item.id === id ? {...exist, quantity:exist.quantity + 1} : item
             ));
     }else {
-        setCartItems([...cartItems, {id, quantity: 1}])
+        setCartItems([...cartItems, {id, quantity: 1}]);
     }
   };
 
@@ -92,9 +88,7 @@ export const ShopProvider = ({children}) =>{
   const removeProduct = (id)=> {
     const exist = cartItems.find(item  => item.id === id);
         if(exist?.quantity === 1) {
-
             setCartItems(cartItems.filter((item) =>item.id !== id));
-
         } else {
             setCartItems(
                 cartItems.map((item)=>
@@ -110,7 +104,7 @@ export const ShopProvider = ({children}) =>{
 
 
 
-  // Warenkorb sichtbar bei neu laden
+  // Save cart in local Storage
   useEffect(() => {
     const json = localStorage.getItem("cartItems");
     const loadedItems = JSON.parse(json);
@@ -124,11 +118,6 @@ export const ShopProvider = ({children}) =>{
         const json = JSON.stringify(cartItems);
        localStorage.setItem("cartItems", json);
       }, [cartItems]);
-
-
- 
-
-
 
 
   

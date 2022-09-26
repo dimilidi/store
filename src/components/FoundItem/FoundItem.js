@@ -1,16 +1,12 @@
 // Hooks
 import { useContext, useEffect } from 'react'
 import { useParams, useNavigate} from 'react-router-dom'
-
 // Components
 import OrderButton from '../OrderButton/OrderButton';
-
 // Contexts
 import { ShopContext } from '../../context/ShopContext';
-
 // Data
 import {products} from '../../data/products';
-
 // Styles
 import './FoundItem.css'
 

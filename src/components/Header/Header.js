@@ -1,19 +1,15 @@
 // Hooks
 import { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
-
 // Contexts
 import { ShopContext } from "../../context/ShopContext";
 import { UserContext } from '../../context/UserContext';
-
 // Components
 import Search from "../Search/Search";
 import Navbar  from "../Navbar/Navbar";
-
 // Icons
 import { BsCart } from "react-icons/bs";
 import { AiOutlineUser } from 'react-icons/ai';
-
 // Styles
 import './Header.css'
 
