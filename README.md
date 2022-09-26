@@ -1,70 +1,106 @@
-# Getting Started with Create React App
+# MyStore App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Table of contents
+* [General info](#general-info)
+* [Technologies](#technologies)
+* [Setup](#setup)
+* [Screenshots](#screenshots)
+* [Features](#features)
+* [Status](#status)
+* [Demo](#demo)
+* [Sources](#sources)
+* [Contact](#contact)
 
-## Available Scripts
 
-In the project directory, you can run:
+## General Info
+Simple store app created with React.js. This project is a result of my work during the react project week at the one-year full stack web development bootcamp | DCI | 2022.
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Technologies
+Project is created with:
+* Bootstrap 5
+* React-Bootstrap 2
+* React.js 18
+* CSS3
+* Frame-motion 7
+* Tsparticles 2
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Setup
+To run this project:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+* Clone the project
+ ```    
+https://github.com/dimilidi/store     
+  ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* Go to the project directory
+```
+$ cd ../shop
 
-### `npm run eject`
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+* Install dependencies
+```
+$ npm install
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+* Start the server
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```
+$ npm start
 
-## Learn More
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Screenshots
+![Store view](./public/images/my_store_view.png)
+![Playroom view](./public//images/playroom_view.png)
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Features
+* users log in/ out
+* info page for products
+* add, delete, increase, decrease product in cart, clear cart 
+* show number of products in badge
+* calculation total price
+* view product details card
+* filter based on products name
+* filter based on category
+* cart and user saved in local storage
+* responsive design 
+* product-related memory game
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Status
+This is the final version of the app. Feel free to add more functionality and to extend my version. 
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+## Demo
+[See Website](https://store-and-playroom.netlify.app/)
+
+
+
+## Sources
+* Front-end Design inspired by [Kyle | WDS](https://www.youtube.com/watch?v=lATafp15HWA&t=2971s)
+* Many thanks to [mohammadyousefvand](https://github.com/mohammadyousefvand/Shoping-card-react?ref=reactjsexample.com)
+* Products images from (https://unsplash.com/)
+
+
+
+## Contact
+Created by [@dimilidi](https://github.com/dimilidi) - feel free to contact me!
+
+
