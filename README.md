@@ -94,9 +94,12 @@ This is the final version of the app. Feel free to add more functionality and to
 
 
 ## Sources
+* [Particles](https://www.npmjs.com/package/react-tsparticles)
+* [Framer-motion](https://www.framer.com/motion/)
+* [Framer-motion Library](https://www.npmjs.com/package/framer-motion)
+* Products images from (https://unsplash.com/)
 * Front-end Design inspired by [Kyle | WDS](https://www.youtube.com/watch?v=lATafp15HWA&t=2971s)
 * Many thanks to [mohammadyousefvand](https://github.com/mohammadyousefvand/Shoping-card-react?ref=reactjsexample.com)
-* Products images from (https://unsplash.com/)
 
 
 
