@@ -73,13 +73,11 @@ svg {
   }
   .header-con {
     width: 100%;
-    padding-right: 30px;
   }
 
 }
 
 @media screen and (max-width: 590px) {
-
   .left-aligner {
     width: 40%;
   }
